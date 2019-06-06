@@ -1,0 +1,26 @@
+<php
+/**************** Youke 365 website navigation system Open source version **********************/
+/* */
+/* Youke365.site (C)2018 Youke365 Inc. */
+/* This is NOT a freeware, use is subject to license terms */
+/* Youke 365 Website Navigation Open Source Edition Free for individual users Please keep the copyright at the bottom */
+/* 2018.9 */
+/************************************************* *************/
+/ / Check the PHP environment
+If(version_compare(PHP_VERSION,'5.4.0','<=')) die('require PHP >=5.4');
+
+ // website root directory
+Define('ROOT_PATH', str_replace('\\', '/', dirname(__FILE__)).'/');
+ // application directory
+Define('APP_PATH','app/');
+
+ // Debug mode
+Define('APP_DEBUG',false); //true Turn on debug mode false close
+
+// Prevent malicious access
+Define('IN_YOUKE365', true);
+
+Require(ROOT_PATH.'client/auth.php');
+
+//* Load the initialization file */
+Require(ROOT_PATH.'youkephp/start.php');
